@@ -1,11 +1,22 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Hero from '../components/Hero.astro';
+import ProductSection from '../components/ProductSection.astro';
+import WhyUs from '../components/WhyUs.astro';
+import { productGroups } from '../data/products';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+	title="Pastas artesanales para pedir por WhatsApp"
+	description="Landing page de sorrentinos y raviolones artesanales con diseño editorial cálido y CTA directo a WhatsApp."
+>
+	<main>
+		<Hero />
+		<ProductSection
+			title="Dos líneas de pasta, ocho formas de convertir."
+			intro="Una selección breve, clara y fácil de comprar: sorrentinos y raviolones, ambos en cajas de 20 unidades y con cuatro rellenos clásicos para resolver desde una cena rápida hasta una mesa compartida."
+			groups={productGroups}
+		/>
+		<WhyUs />
+	</main>
 </Layout>

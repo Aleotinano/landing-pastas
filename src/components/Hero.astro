@@ -1,0 +1,92 @@
+---
+const whatsappUrl =
+  "https://wa.me/5492646779473?text=" +
+  encodeURIComponent("Hola, quiero pedir pastas artesanales");
+---
+
+<!-- Wrapper que da el espacio para que la card sobresalga -->
+<div class="relative pb-40 sm:pb-20 lg:pb-0">
+  <section
+    class="relative px-4 sm:pb-32 pt-15 pb-30 sm:px-6 lg:px-8
+           bg-[url('/hero.jpg')] bg-cover bg-center overflow-visible"
+  >
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <div
+      class="absolute left-6 top-8 h-32 w-32 rounded-full bg-apricot/80 blur-3xl z-0"
+    >
+    </div>
+    <div
+      class="absolute right-8 bottom-8 h-40 w-40 rounded-full bg-tomato/80 blur-3xl z-0"
+    >
+    </div>
+
+    <!-- Texto — solo ocupa la mitad izquierda en todos los breakpoints -->
+    <div class="mx-auto max-w-7xl relative z-10">
+      <div class="sm:max-w-3/4 lg:max-w-1/2 flex flex-col gap-6">
+        <h1
+          class="font-display leading-none text-cream text-5xl sm:text-6xl lg:text-8xl"
+        >
+          Pastas caseras
+        </h1>
+        <p class="text-base leading-7 text-cream/90 sm:text-lg">
+          Sorrentinos y raviolones rellenos, hechos para resolver una comida
+          rica, casera y visualmente irresistible. Elegís tu variedad y pedís
+          directo por WhatsApp.
+        </p>
+        <div>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex items-center justify-center
+          rounded-full bg-ink px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em]
+          text-cream transition hover:-translate-y-0.5 hover:bg-mocha"
+          >
+            Pedir por WhatsApp
+          </a>
+        </div>
+      </div>
+      <!-- Card: absolute dentro del wrapper, anclada a la derecha, sobresale hacia abajo -->
+      <div
+        class="absolute
+           right-0 sm:left-auto
+           -bottom-8 sm:bottom-0 translate-y-full sm:translate-y-4/5 lg:translate-y-3/5
+           z-20
+           w-64 lg:w-82"
+      >
+        <div
+          class="relative aspect-6/8 rounded-4xl border border-white/50 bg-sand p-2 shadow-md overflow-hidden"
+        >
+          <img
+            src="./cardHero.png"
+            alt="Plato de pasta fresca artesanal"
+            class="h-full w-full rounded-3xl object-cover"
+            loading="eager"
+          />
+          <span
+            class="absolute inset-x-3 sm:inset-x-4 bottom-3 sm:bottom-4 flex flex-col gap-2"
+          >
+            <header class="rounded-4xl bg-white/80 p-1 backdrop-blur">
+              <a
+                href="#productos"
+                class="inline-flex items-center justify-center rounded-full bg-ink
+                   py-2.5 sm:py-3 text-xs sm:text-sm font-semibold uppercase
+                   tracking-[0.2em] text-cream transition hover:bg-mocha w-full"
+              >
+                Ver productos
+              </a>
+            </header>
+            <footer class="rounded-4xl bg-white/70 px-3 py-2 backdrop-blur">
+              <p
+                class="text-xs uppercase tracking-[0.2em] text-earth text-center font-bold whitespace-nowrap"
+              >
+                Cajas de 20 unidades
+              </p>
+            </footer>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
