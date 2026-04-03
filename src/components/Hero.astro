@@ -1,7 +1,9 @@
 ---
+import { whatsappNumber } from "../config";
+
 const whatsappUrl =
-  "https://wa.me/5492646779473?text=" +
-  encodeURIComponent("Hola, quiero pedir pastas artesanales");
+  `https://wa.me/${whatsappNumber}?text=` +
+  encodeURIComponent("Hola, quiero pedir pastas caseras");
 ---
 
 <div class="relative pb-36 sm:pb-20 lg:pb-0">
@@ -28,7 +30,9 @@ const whatsappUrl =
                 justify-center sm:justify-start
                 items-center sm:items-start"
       >
-        <h1 class="font-display leading-none text-cream text-6xl lg:text-7xl">
+        <h1
+          class="text-nowrap font-display leading-none text-cream text-6xl lg:text-7xl"
+        >
           Pastas caseras
         </h1>
         <p
@@ -61,7 +65,7 @@ const whatsappUrl =
              left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-0
              -bottom-8 sm:bottom-0 translate-y-full sm:translate-y-4/5 lg:translate-y-3/5
              z-20
-             w-64 lg:w-82"
+             w-62 lg:w-76"
       >
         <div
           class="relative aspect-6/8 rounded-4xl border border-white/50 bg-cream p-2 shadow-md overflow-hidden"
@@ -76,9 +80,9 @@ const whatsappUrl =
             <header class="rounded-4xl bg-white/80 p-1 backdrop-blur">
               <a
                 href="#productos"
-                class="inline-flex items-center justify-center rounded-full bg-primary
+                class="inline-flex items-center justify-center rounded-full bg-text/90
                    py-2.5 sm:py-3 text-xs sm:text-sm font-semibold uppercase
-                   tracking-[0.2em] text-cream transition hover:bg-accent w-full"
+                   tracking-[0.2em] text-cream transition hover:bg-text w-full"
               >
                 Ver productos
               </a>

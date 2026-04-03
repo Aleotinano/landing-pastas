@@ -1,22 +1,20 @@
 ---
-import Hero from '../components/Hero.astro';
-import ProductSection from '../components/ProductSection.astro';
-import WhyUs from '../components/WhyUs.astro';
-import { productGroups } from '../data/products';
-import Layout from '../layouts/Layout.astro';
+import Hero from "../components/Hero.astro";
+import ProductSection from "../components/ProductSection.astro";
+import Layout from "../layouts/Layout.astro";
+import { productGroups } from "../data/products";
 ---
 
 <Layout
-	title="Pastas artesanales para pedir por WhatsApp"
-	description="Landing page de sorrentinos y raviolones artesanales con diseño editorial cálido y CTA directo a WhatsApp."
+  title="Pastas artesanales para pedir por WhatsApp"
+  description="Landing page de sorrentinos y raviolones artesanales con diseï¿½o editorial cï¿½lido y CTA directo a WhatsApp."
 >
-	<main>
-		<Hero />
-		<ProductSection
-			title="Dos líneas de pasta, ocho formas de convertir."
-			intro="Una selección breve, clara y fácil de comprar: sorrentinos y raviolones, ambos en cajas de 20 unidades y con cuatro rellenos clásicos para resolver desde una cena rápida hasta una mesa compartida."
-			groups={productGroups}
-		/>
-		<WhyUs />
-	</main>
+  <main>
+    <Hero />
+    <ProductSection
+      title="Productos y variedades"
+      intro="Pastas caseras e ingredientes naturales, ideales para cualquier salsa."
+      groups={productGroups}
+    />
+  </main>
 </Layout>

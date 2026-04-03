@@ -1,20 +1,44 @@
-export const whatsappBaseUrl = 'https://wa.me/5492646779473';
-
 export const productGroups = [
-	{
-		name: 'Sorrentinos',
-		eyebrow: 'Caja de 20 unidades',
-		description:
-			'Pasta fresca artesanal con masa tierna, rellenos abundantes y ese perfil casero que pide salsa, manteca o gratinado.',
-		varieties: ['Jam�n y queso', '4 quesos', 'Ricota y nuez', 'Pollo y queso'],
-	},
-	{
-		name: 'Raviolones',
-		eyebrow: 'Caja de 20 unidades',
-		description:
-			'Piezas generosas, textura suave y un formato ideal para una comida especial sin resignar practicidad.',
-		varieties: ['Jam�n y queso', '4 quesos', 'Ricota y nuez', 'Pollo y queso'],
-	},
+  {
+    name: "Sorrentinos",
+    quantity: "Caja de 20 unidades",
+    description:
+      "Masa suave y rellenos de verdad. Creamos sorrentinos con ese perfil casero irresistible.",
+    varieties: [
+      { name: "Jamón y queso", price: 18000 },
+      {
+        name: "Ricota y nuez",
+        price: 18000,
+      },
+      {
+        name: "Pollo y queso",
+        price: 18000,
+      },
+      {
+        name: "4 quesos",
+        price: 20000,
+      },
+    ],
+  },
+  {
+    name: "Raviolones",
+    quantity: "Caja de 20 unidades",
+    description:
+      "El sabor de siempre en un tamaño único. Raviolones de masa suave y rellenos intensos, pensados para disfrutar de un plato gourmet en casa.",
+    varieties: [
+      { name: "Jamón y queso", price: 18000 },
+      {
+        name: "Ricota y nuez",
+        price: 18000,
+      },
+      {
+        name: "Pollo y queso",
+        price: 18000,
+      },
+      {
+        name: "4 quesos",
+        price: 20000,
+      },
+    ],
+  },
 ] as const;
-
-export const priceLabel = '$12000';
