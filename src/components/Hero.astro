@@ -4,10 +4,11 @@ const whatsappUrl =
   encodeURIComponent("Hola, quiero pedir pastas artesanales");
 ---
 
-<!-- Wrapper que da el espacio para que la card sobresalga -->
-<div class="relative pb-40 sm:pb-20 lg:pb-0">
+<div class="relative sm:pb-20 lg:pb-0">
   <section
-    class="relative px-4 sm:pb-32 pt-15 pb-30 sm:px-6 lg:px-8
+    class="relative pb-52 sm:pb-32
+           pt-18 sm:pt-18
+           px-4 sm:px-6 lg:px-8
            bg-[url('/hero.jpg')] bg-cover bg-center overflow-visible"
   >
     <div class="absolute inset-0 bg-black/50"></div>
@@ -21,15 +22,22 @@ const whatsappUrl =
     >
     </div>
 
-    <!-- Texto — solo ocupa la mitad izquierda en todos los breakpoints -->
     <div class="mx-auto max-w-7xl relative z-10">
-      <div class="sm:max-w-3/4 lg:max-w-1/2 flex flex-col gap-6">
-        <h1
-          class="font-display leading-none text-cream text-5xl sm:text-6xl lg:text-8xl"
-        >
+      <div
+        class="sm:max-w-3/4 lg:max-w-1/2 flex flex-col gap-6
+                justify-center sm:justify-start
+                items-center sm:items-start"
+      >
+        <h1 class="font-display leading-none text-cream text-6xl lg:text-7xl">
           Pastas caseras
         </h1>
-        <p class="text-base leading-7 text-cream/90 sm:text-lg">
+        <p
+          class="px-2
+                text-center sm:text-left
+                text-lg sm:text-lg
+                leading-7 text-cream
+                mb-1"
+        >
           Sorrentinos y raviolones rellenos, hechos para resolver una comida
           rica, casera y visualmente irresistible. Elegís tu variedad y pedís
           directo por WhatsApp.
@@ -40,20 +48,20 @@ const whatsappUrl =
             target="_blank"
             rel="noreferrer"
             class="inline-flex items-center justify-center
-          rounded-full bg-ink px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em]
-          text-cream transition hover:-translate-y-0.5 hover:bg-mocha"
+                   rounded-full bg-tomato px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em]
+                 text-cream transition hover:bg-mocha"
           >
             Pedir por WhatsApp
           </a>
         </div>
       </div>
-      <!-- Card: absolute dentro del wrapper, anclada a la derecha, sobresale hacia abajo -->
+
       <div
         class="absolute
-           right-0 sm:left-auto
-           -bottom-8 sm:bottom-0 translate-y-full sm:translate-y-4/5 lg:translate-y-3/5
-           z-20
-           w-64 lg:w-82"
+             left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-0
+             -bottom-8 sm:bottom-0 translate-y-full sm:translate-y-4/5 lg:translate-y-3/5
+             z-20
+             w-64 lg:w-82"
       >
         <div
           class="relative aspect-6/8 rounded-4xl border border-white/50 bg-sand p-2 shadow-md overflow-hidden"
@@ -64,20 +72,18 @@ const whatsappUrl =
             class="h-full w-full rounded-3xl object-cover"
             loading="eager"
           />
-          <span
-            class="absolute inset-x-3 sm:inset-x-4 bottom-3 sm:bottom-4 flex flex-col gap-2"
-          >
+          <span class="absolute inset-x-6 bottom-6 flex flex-col gap-2">
             <header class="rounded-4xl bg-white/80 p-1 backdrop-blur">
               <a
                 href="#productos"
-                class="inline-flex items-center justify-center rounded-full bg-ink
+                class="inline-flex items-center justify-center rounded-full bg-tomato
                    py-2.5 sm:py-3 text-xs sm:text-sm font-semibold uppercase
                    tracking-[0.2em] text-cream transition hover:bg-mocha w-full"
               >
                 Ver productos
               </a>
             </header>
-            <footer class="rounded-4xl bg-white/70 px-3 py-2 backdrop-blur">
+            <footer class="rounded-4xl bg-white/70 p-3 backdrop-blur">
               <p
                 class="text-xs uppercase tracking-[0.2em] text-earth text-center font-bold whitespace-nowrap"
               >
