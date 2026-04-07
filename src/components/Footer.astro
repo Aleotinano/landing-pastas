@@ -1,0 +1,47 @@
+---
+import { whatsappNumber } from "../config";
+
+const whatsappUrl =
+  `https://wa.me/${whatsappNumber}?text=` +
+  encodeURIComponent("Hola, quiero pedir pastas caseras");
+
+const formatWhatsappNumber = (value?: string) => {
+  if (!value) return "WhatsApp";
+
+  if (value.length === 13 && value.startsWith("549")) {
+    return `+${value.slice(0, 2)} ${value.slice(2, 3)} ${value.slice(3, 6)} ${value.slice(6, 9)}-${value.slice(9)}`;
+  }
+
+  return `+${value}`;
+};
+
+const formattedWhatsapp = formatWhatsappNumber(whatsappNumber);
+---
+
+<footer
+  class="border-t border-earth/20 bg-sand/50 mx-auto flex max-w-7xl flex-col gap-4 px-4 py-8 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8"
+>
+  <p class="text-xs font-semibold uppercase tracking-[0.24em] text-earth">
+    Contacto
+  </p>
+  <h2 class="font-display text-3xl leading-none text-text sm:text-4xl">
+    Hacé tu pedido directo
+  </h2>
+  <a
+    href={whatsappUrl}
+    target="_blank"
+    rel="noreferrer"
+    class="text-base font-semibold text-text transition hover:text-accent"
+  >
+    {formattedWhatsapp}
+  </a>
+
+  <a
+    href={whatsappUrl}
+    target="_blank"
+    rel="noreferrer"
+    class="inline-flex items-center justify-center rounded-full bg-primary/90 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-cream transition hover:bg-accent"
+  >
+    Escribir por WhatsApp
+  </a>
+</footer>
