@@ -8,6 +8,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   server: {
-    allowedHosts: ["all"],
+    allowedHosts: ["https://laspastasdemica.netlify.app"],
   },
 });
