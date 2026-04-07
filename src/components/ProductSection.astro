@@ -1,4 +1,4 @@
----
+﻿---
 import ProductCard from "./ProductCard.astro";
 import type { Group } from "../types/types";
 
@@ -13,19 +13,23 @@ const { title, intro, groups } = Astro.props;
 
 <section
   id="productos"
+  data-animate="fade"
   class="mx-auto max-w-7xl
- 		 px-4 py-14 sm:px-6 lg:px-8 lg:py-20
+		 px-4 py-14 sm:px-6 lg:px-8 lg:py-20
 		 flex flex-col gap-8"
 >
-  <header class="flex flex-col
+  <header
+    data-animate="up-sm"
+    class="flex flex-col
 			  items-center sm:items-start
-			  gap-1 max-w-3xl">
+			  gap-1 max-w-3xl"
+  >
     <p class="text-md font-semibold uppercase tracking-[0.2em] text-earth mb-2">
       Catálogo
     </p>
     <h2
       class="font-display leading-none text-text
-	  		 text-4xl sm:text-5xl lg:text-6xl
+			 text-4xl sm:text-5xl lg:text-6xl
 			  text-center sm:text-start"
     >
       {title}
@@ -41,12 +45,12 @@ const { title, intro, groups } = Astro.props;
   <main class="flex flex-col gap-8">
     {
       groups.map((group) => (
-        <section class="flex flex-col gap-5 md:gap-8">
+        <section class="flex flex-col gap-5 md:gap-8" data-animate="up-sm">
           <header
             class="flex border-b border-earth/30 pb-5 
 				   gap-2 sm:gap-8
-		   		   flex-col sm:flex-row 
-		   		   items-center sm:items-end shrink-0
+	   			   flex-col sm:flex-row 
+	   			   items-center sm:items-end shrink-0
 				   "
           >
             <div class="flex flex-col gap-1">

@@ -1,4 +1,4 @@
----
+﻿---
 import { whatsappNumber } from "../config";
 
 const whatsappUrl =
@@ -31,11 +31,15 @@ const whatsappUrl =
                 items-center sm:items-start"
       >
         <h1
+          data-animate="up-sm"
+          data-animate-delay="50"
           class="text-nowrap font-display leading-none text-cream text-6xl lg:text-8xl"
         >
-          Pastas caseras
+          Las pastas de mica
         </h1>
         <p
+          data-animate="up-sm"
+          data-animate-delay="140"
           class="px-2
                 text-center sm:text-left
                 text-lg sm:text-xl
@@ -43,10 +47,10 @@ const whatsappUrl =
                 mb-1"
         >
           Sorrentinos y raviolones rellenos, hechos para resolver una comida
-          rica, casera y visualmente irresistible. Elegís tu variedad y pedís
-          directo por WhatsApp.
+          rica, casera e irresistible. Elegís tu variedad y pedís directo por
+          WhatsApp.
         </p>
-        <div>
+        <div data-animate="up-sm" data-animate-delay="220">
           <a
             href={whatsappUrl}
             target="_blank"
@@ -61,6 +65,8 @@ const whatsappUrl =
       </div>
 
       <div
+        data-animate="left"
+        data-animate-delay="180"
         class="absolute
              left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-0
              -bottom-8 sm:bottom-0 translate-y-full sm:translate-y-4/5 lg:translate-y-3/5
